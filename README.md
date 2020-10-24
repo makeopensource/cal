@@ -1,6 +1,5 @@
 # CAL
-Contributers: [Jake Savitt](https://github.com/jakesavi) [Nick Brown](https://github.com/bicknrown) [Adam Russell](https://github.com/russella26) [Emil Kovacev](https://github.com/emilcovacev)
-
+Contributers: [Nick Brown](https://github.com/bicknrown) [Emil Kovacev](https://github.com/emilcovacev) [Adam Russell](https://github.com/russella26) [Jake Savitt](https://github.com/jakesavi)
 
 ## PLAN
 We plan to create an easily-installable CLI used to set progress frameworks on files, and manage directories as projects/assignments. We also intend on integrating command-line access to UB's expanded Autolab submission system, so that students can submit their assignments via the command line
