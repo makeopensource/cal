@@ -13,8 +13,7 @@ def mkprj(path=os.getcwd()):
 
 
 print(mkprj())
-{"Name Of File": "List of data about project"}
-["List of data about project : Due date, path ", "submission file"]
+
 
 
 def listDirectory(dictionary):
@@ -28,6 +27,4 @@ def listDirectory(dictionary):
             retval += item + '  '
         print(retval)
 
-listDirectory({"Project1": ["10/28/2020", "usr/test/Projects", "project.zip"],
-               "Project2": ["10/28/2020", "usr/test/Projects", "project2.tar"],
-               "Special3": ["10/31/2020", "usr/test/Projects", "Project3.py"]})
+
