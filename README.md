@@ -8,6 +8,8 @@ Contributers: [Nick Brown](https://github.com/bicknrown) [Emil Kovacev](https://
 | cal submit <PROJECT_NAME> | submit project to autograder (with option to assign project to PROJECT_NAME) | -f (force submit)                      |
 | cal project <PATH>        | creates a project, assigns project to directory if PATH defined.             | *(SUBMISSION_PATH)                     |
 | cal check <PROJECT_NAME>  | Checks the status of projects                                                | *(search by priority)                  |
+| cal freeze <PROJECT_NAME> | Saves status of project                                                      |-d (for folders rather than files)      |
+| cal restore <PROJECT_NAME>| Restores status of project                                                   |                                        |
 
 ## PLAN
 We plan to create an easily-installable CLI used to set progress frameworks on files, and manage directories as projects/assignments. We also intend on integrating command-line access to UB's expanded Autolab submission system, so that students can submit their assignments via the command line
