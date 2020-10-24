@@ -1,5 +1,5 @@
 # CAL
-Contributers: Jake Savitt
+Contributers: [Jake Savitt](https://github.com/jakesavi) [Nick Brown](https://github.com/bicknrown) [Adam Russell](https://github.com/russella26) [Emil Kovacev](https://github.com/emilcovacev)
 
 
 ## PLAN
