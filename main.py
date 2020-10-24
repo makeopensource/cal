@@ -2,7 +2,7 @@ import argparse
 import sys
 import os
 
-import mkprj
+from project import mkprj
 
 
 if __name__ == "__name__":
