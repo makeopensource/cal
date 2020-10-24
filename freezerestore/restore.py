@@ -2,7 +2,7 @@ import shutil
 import os.path
 from os import path
 
-def freeze(filetitle):
+def restore(filetitle):
     if not path.exists(filetitle):
         return
     if not path.exists(filetitle + ".temp"):
