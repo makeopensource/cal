@@ -1,4 +1,6 @@
 # CAL
+Contributers: Jake Savitt
+
 
 ## PLAN
 We plan to create an easily-installable CLI used to set progress frameworks on files, and manage directories as projects/assignments. We also intend on integrating command-line access to UB's expanded Autolab submission system, so that students can submit their assignments via the command line
