@@ -2,7 +2,7 @@ import argparse
 import sys
 import os
 
-from project import mkprj
+from project import make_project
 
 
 if __name__ == "__name__":
