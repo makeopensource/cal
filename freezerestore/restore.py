@@ -9,4 +9,4 @@ def restore(filetitle):
         return
     shutil.move(filetitle, filetitle + ".temp2")
     shutil.move(filetitle + ".temp", filetitle)
-    shutil.move(filetitle + ".temp2", filetitle + ".temp2")
+    shutil.move(filetitle + ".temp2", filetitle + ".temp")
