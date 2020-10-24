@@ -10,7 +10,6 @@ def make_project(local_path="./"):
     assignment = input("FULL ASSIGNMENT NAME from Autograder: ")
     assignment = assignment.lower()
     assignment = re.sub('[^A-Za-z0-9]+', '', assignment)
-
     duedate = input("Due Date (MM/DD/YY): ")
     retdict = {"course": course, "semester": semester, "assignment": assignment, "duedate": duedate}
 
@@ -19,9 +18,8 @@ def make_project(local_path="./"):
 
     # turn current directory into project
     if local_path == "./":
-        with open('./metadata.json', 'w') as outfile:
-            jval = json.dumps(retdict)
-            outfile.write(jval)
+        with open('../metadata.json', 'w') as outfile:
+            json.dumps(retdict, outfile)
 
     # make new project directory
     else:
@@ -29,9 +27,8 @@ def make_project(local_path="./"):
 
         try:
             os.mkdir(local_path)
-            with open('./metadata.json', 'w') as outfile:
-                jval = json.dumps(retdict)
-                outfile.write(jval)
+            with open('../metadata.json', 'w') as outfile:
+                json.dumps(retdict, outfile)
 
         except FileExistsError:
             print("file already exists")
