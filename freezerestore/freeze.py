@@ -1,9 +1,10 @@
 import shutil
 import json
 import os
-
+from os.path import expanduser
 def freeze(filetitle):
-    with open('../config.json') as f:
+    home = expanduser("~")
+    with open(home +'/.config/cal/calconfig.json') as f:
         data = json.load(f)
     print(os.getcwd())
     shutil.copy(os.getcwd() + '/' + filetitle, data.get("location", "~/.calfreeze") + filetitle)
