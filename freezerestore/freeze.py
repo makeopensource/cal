@@ -7,4 +7,4 @@ def freeze(filetitle):
     with open(home +'/.config/cal/calconfig.json') as f:
         data = json.load(f)
     print(os.getcwd())
-    shutil.copy(os.getcwd() + '/' + filetitle, data.get("location", "~/.calfreeze") + filetitle)
+    shutil.copy(os.getcwd() + '/' + filetitle, data.get("location", "~/.calfreeze") + '/' + filetitle)
