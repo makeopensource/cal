@@ -2,7 +2,7 @@ import argparse
 import sys
 import os
 from project import check as c
-from project import make_project as mp
+from project import make_project as p
 from project.freezerestore import freeze as f
 from project.freezerestore import restore as r
 
