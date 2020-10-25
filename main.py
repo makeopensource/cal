@@ -7,21 +7,18 @@ from project import make_project as mp
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("argA")
-    parser.add_argument("--projectname", action="store_true")
+    parser.add_argument("operation", action="store", type=str)
+    parser.add_argument("--argname", default="", action="store", type=str)
 
     args = parser.parse_args()
 
-    # creates a project, assigns project to directory if PATH defined.
-    if (args.argA == "project"):
-        print("creating project...")
-        mp.make_project()
-        sys.exit(0)
-
-    elif args.project and args.projectname:
-        print("creating project...")
-        mp.make_project(args.projectname)
-        sys.exit(0)
-
+    if operation == "project":
+        print("make a project (use code from github)")
+    elif operation == "check":
+        print("use check (needs projectname)")
+    elif operation == "freeze":
+        print("run freeze (needs filename)")
+    elif operation == "restore":
+        print("run restore (also needs filename)")
     else:
-        print("project creation failed")
+        print("Command not found.")
