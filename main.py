@@ -18,28 +18,28 @@ if __name__ == "__main__":
             print("Creating project...")
             p.make_project()
             sys.exit(0)
-        elif:
+        else:
             print("Creating project...")
             p.make_project(arg.argname)
             sys.exit(0)
     elif arg.operation == "check":
         if arg.argname == "":
             print("You didn't give a project name!")
-        elif:
+        else:
             print("Checking project status...")
             c.check(arg.argname)
             sys.exit(0)
     elif arg.operation == "freeze":
         if arg.argname == "":
             print("You didn't input a file name!")
-        elif:
+        else:
             print("Freezing file " + arg.argname + ".")
             f.freeze(arg.argname)
             sys.exit(0)
     elif arg.operation == "restore":
         if arg.argname == "":
             print("You didn't input a file name!")
-        elif:
+        else:
             print("Restoring file " + arg.argname + ".")
             r.restore(arg.argname)
             sys.exit(0)
