@@ -11,4 +11,4 @@ def check():
         meta = {}
     # This is mostly for formatting purposes
     for keys in meta.keys():
-        print(meta.get(keys, ""))
+        print(meta.get(keys, {}))
