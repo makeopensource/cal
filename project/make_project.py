@@ -3,7 +3,7 @@ import sys
 import os
 import json
 
-def mkprj(local_path="./"):
+def make_project(local_path="./"):
     course = input("Course Name (i.e. CSE220):")
     semester = input("Semester (f for fall, s for spring, i.e. f20, s19):")
     assignment = input("FULL ASSIGNMENT NAME from Autograder:")
@@ -30,4 +30,4 @@ def mkprj(local_path="./"):
         except FileExistsError:
             print("file already exists")
 
-print(mkprj("newproject"))
+print(make_project("newproject"))
