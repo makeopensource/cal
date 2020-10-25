@@ -4,7 +4,6 @@ Contributers: [Nick Brown](https://github.com/bicknrown) [Emil Kovacev](https://
 ## COMMANDS
 | Commands                  | Use                                                                          | Tags (*(text) indicates optional)      |
 |---------------------------|------------------------------------------------------------------------------|----------------------------------------|
-| cal setup                 | setting up autograder                                                        | -2fa (enables 2-factor authentication) |
 | cal submit <PROJECT_NAME> | submit project to autograder (with option to assign project to PROJECT_NAME) | -f (force submit)                      |
 | cal project <PATH>        | creates a project, assigns project to directory if PATH defined.             | *(SUBMISSION_PATH)                     |
 | cal check <PROJECT_NAME>  | Checks the status of projects                                                | *(search by priority)                  |
