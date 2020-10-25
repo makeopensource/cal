@@ -4,9 +4,10 @@ import os
 import json
 
 def make_project(local_path="./"):
-    course = input("Course Name (i.e. CSE220):")
-    semester = input("Semester (f for fall, s for spring, i.e. f20, s19):")
-    assignment = input("FULL ASSIGNMENT NAME from Autograder:")
+    course = input("Course Name (i.e. CSE220): ")
+    semester = input("Semester (f for fall, s for spring, i.e. f20, s19): ")
+    assignment = input("FULL ASSIGNMENT NAME from Autograder: ")
+    duedate = input("Due Date (MM/DD/YY): ")
     retdict = {"course": course,"semester":semester, "assignment":assignment}
     retjson = json.dumps(retdict)
     curr_path = os.getcwd()
