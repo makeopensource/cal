@@ -1,19 +1,14 @@
 import webbrowser
 import json
 import os.path
-
+import sqlite3
 def submit(filename):
-    if os.path.isfile("./metadata.json"):
-        with open("./metadata.json", "r") as f:
-            meta = json.loads(f.read())
-
-    else:
-        meta = {}
-    course = meta.get("course", "")
-    semester = meta.get("semester", "")
-    assignment = meta.get("assignment", "")
-    if course != "" and assignment != "" and semester != "":
-        webbrowser.open("https://autograder.cse.buffalo.edu/courses/" + course + "-" + semester + "/assessments/" + assignment)
+    conn = sqlite3.connect('projects.db')
+    c = conn.cursor()
+    for row in c.execute('SELECT * FROM projects'):
+        dat = row
+    if dat:
+        webbrowser.open("https://autograder.cse.buffalo.edu/courses/" + dat[2] + "-" + dat[3] + "/assessments/" + dat[4],0)
     else:
         print("missing metadata, redirecting to autograder main page")
         webbrowser.open("https://autograder.cse.buffalo.edu/", 0)

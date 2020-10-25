@@ -14,7 +14,7 @@ if __name__ == "__main__":
     conn = sqlite3.connect('projects.db')
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS projects
-             (name text, duedate text, course text, semester text,  path text)''')
+             (name text, duedate text, course text, semester text, assignment text,  path text)''')
 
     # Save (commit) the changes
     conn.commit()
