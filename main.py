@@ -2,12 +2,9 @@ import argparse
 import sys
 import os
 from project import check as c
-<<<<<<< HEAD
 from project import make_project as mp
 from project import submit as s
-=======
 from project import make_project as p
->>>>>>> ed8805eee4eda2f819f85dc43e16f718bc6877a9
 from project.freezerestore import freeze as f
 from project.freezerestore import restore as r
 
