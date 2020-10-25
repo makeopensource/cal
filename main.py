@@ -3,8 +3,8 @@ import sys
 import os
 from project import check as c
 from project import make_project as mp
-from project import freeze as f
-from project import restore as r
+from project.freezerestore import freeze as f
+from project.freezerestore import restore as r
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
