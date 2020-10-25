@@ -15,7 +15,7 @@ def make_project(local_path="./"):
 
     # turn current directory into project
     if local_path == "./":
-        with open('metadata.json', 'w') as outfile:
+        with open('../metadata.json', 'w') as outfile:
             json.dump(retjson, outfile)
         return (curr_path.split(separator)[-1], curr_path)
 
@@ -25,7 +25,7 @@ def make_project(local_path="./"):
 
         try:
             os.mkdir(local_path)
-            with open('metadata.json', 'w') as outfile:
+            with open('../metadata.json', 'w') as outfile:
                 json.dump(retjson, outfile)
             return (local_path, new_path)
         except FileExistsError:
