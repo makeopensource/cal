@@ -16,5 +16,5 @@ if __name__ == "__name__":
 
     # creates a project, assigns project to directory if PATH defined.
     if (args.project):
-        mkprj(args.dir_name)
+        make_project.mkprj(args.dir_name)
 
