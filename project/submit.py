@@ -6,6 +6,7 @@ def submit(filename):
     if os.path.isfile("./metadata.json"):
         with open("./metadata.json", "r") as f:
             meta = json.loads(f.read())
+
     else:
         meta = {}
     course = meta.get("course", "")
