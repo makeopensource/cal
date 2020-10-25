@@ -1,14 +1,17 @@
 """ Args parse Implemented and View """
 import sys
 import os
-import json
-def listDirectory():
+
+
+def listDirectory(dictionary):
     print("Projects:")
-    if os.path.isfile("metadata.json"):
-        with open("metadata.json", "r") as f:
-            meta = json.load(f)
-    else:
-        meta = {}
     # This is mostly for formating purposes
-    for keys in meta.keys():
-        print(meta.get(keys, ""))
+
+    for fileName in dictionary.keys():
+        value = dictionary.get(fileName)
+        retval = fileName + '  '
+        for item in value:
+            retval += item + '  '
+        print(retval)
+
+
