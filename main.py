@@ -2,6 +2,8 @@ import argparse
 import sys
 import os
 from project import check as c
+from project import make_project as mp
+from project import submit as s
 from project import make_project as p
 from project.freezerestore import freeze as f
 from project.freezerestore import restore as r
@@ -28,6 +30,13 @@ if __name__ == "__main__":
         else:
             print("Checking project status...")
             c.check(arg.argname)
+            sys.exit(0)
+    elif arg.operation == "submit":
+        if arg.argname == "":
+            print("You didn't give a project name!")
+        else:
+            print("Opening submit link...")
+            s.submit("")
             sys.exit(0)
     elif arg.operation == "freeze":
         if arg.argname == "":
