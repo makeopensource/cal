@@ -1,10 +1,10 @@
 import argparse
 import sys
 import os
-import project as p
-
+from project import check as c
 from project import make_project as mp
-
+from project import freeze as f
+from project import restore as r
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -27,21 +27,21 @@ if __name__ == "__main__":
             print("You didn't give a project name!")
         elif:
             print("Checking project status...")
-            p.check(arg.argname)
+            c.check(arg.argname)
             sys.exit(0)
     elif arg.operation == "freeze":
         if arg.argname == "":
             print("You didn't input a file name!")
         elif:
             print("Freezing file " + arg.argname + ".")
-            p.freeze(arg.argname)
+            f.freeze(arg.argname)
             sys.exit(0)
     elif arg.operation == "restore":
         if arg.argname == "":
             print("You didn't input a file name!")
         elif:
             print("Restoring file " + arg.argname + ".")
-            p.restore(arg.argname)
+            r.restore(arg.argname)
             sys.exit(0)
 
     else:
