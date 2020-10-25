@@ -25,7 +25,7 @@ if __name__ == "__main__":
             sys.exit(0)
     elif arg.operation == "check":
         print("Checking project status...")
-        c.check(arg.argname)
+        c.check()
         sys.exit(0)
     elif arg.operation == "submit":
         print("Opening submit link...")
