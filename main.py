@@ -11,7 +11,7 @@ if __name__ == "__main__":
     parser.add_argument("operation", action="store", type=str)
     parser.add_argument("--argname", default="", action="store", type=str)
 
-    args = parser.parse_args()
+    arg = parser.parse_args()
 
     if arg.operation == "project":
         if arg.argname == "":
