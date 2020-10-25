@@ -2,6 +2,7 @@
 import os
 import json
 import re
+import sqlite3
 
 
 def make_project(local_path="./"):
@@ -19,6 +20,16 @@ def make_project(local_path="./"):
 
     # turn current directory into project
     if local_path == "./":
+        conn = sqlite3.connect('projects.db')
+        c = conn.cursor()
+
+        # Insert a row of data
+        c.execute("INSERT INTO projects VALUES (?,?,?,?,?)", (local_path, duedate, course, semester, curr_path))
+
+        # Save (commit) the changes
+        conn.commit()
+        conn.close()
+
         with open('./metadata.json', 'w') as outfile:
             jval = json.dumps(retdict)
             outfile.write(jval)
@@ -29,6 +40,17 @@ def make_project(local_path="./"):
 
         try:
             os.mkdir(local_path)
+
+            conn = sqlite3.connect('projects.db')
+            c = conn.cursor()
+
+            # Insert a row of data
+            c.execute("INSERT INTO projects VALUES (?,?,?,?,?)", (local_path, duedate, course, semester, new_path))
+
+            # Save (commit) the changes
+            conn.commit()
+            conn.close()
+
             with open('./metadata.json', 'w') as outfile:
                 jval = json.dumps(retdict)
                 outfile.write(jval)

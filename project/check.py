@@ -2,18 +2,20 @@
 import sys
 import os
 import json
+import sqlite3
 
 
 def check():
-    if os.path.isfile("./metadata.json"):
-        with open("./metadata.json", "r") as f:
-            meta = json.loads(f.read())
+    conn = sqlite3.connect('projects.db')
+    c = conn.cursor()
 
-            for key in meta:
-                if len(key) >= 8:
-                    print(f"{key}\t{meta.get(key)}")
-                else:
-                    print(f"{key}\t\t{meta.get(key)}")
+    # Insert a row of data
+    for row in c.execute('SELECT * FROM projects'):
+        lst = ""
+        for value in row:
+            lst += value + "\t"
+        print(lst.strip())
 
-    else:
-        print("no projects created!")
+    # Save (commit) the changes
+    conn.commit()
+    conn.close()
