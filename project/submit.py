@@ -3,8 +3,8 @@ import json
 import os.path
 
 def submit(filename):
-    if os.path.isfile("metadata.json"):
-        with open("metadata.json", "r") as f:
+    if os.path.isfile("../metadata.json"):
+        with open("../metadata.json", "r") as f:
             meta = json.loads(f)
     else:
         meta = {}
