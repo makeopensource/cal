@@ -29,5 +29,3 @@ def make_project(local_path="./"):
             return (local_path, new_path)
         except FileExistsError:
             print("file already exists")
-
-print(make_project("newproject"))
