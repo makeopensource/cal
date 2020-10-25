@@ -14,12 +14,8 @@ def main():
         conn = sqlite3.connect('projects.db')
         cursor = conn.cursor()
         cursor.execute('''CREATE TABLE IF NOT EXISTS projects
-                (name text, duedate text, course text, semester text,  path text)''')
-
-        # Save (commit) the changes
-        conn.commit()
-        conn.close()
-
+                (name text, duedate text, course text, semester text, assignment text,  path text)''')
+        
         parser = argparse.ArgumentParser()
         parser.add_argument("operation", action="store", type=str)
         parser.add_argument("--argname", default="", action="store", type=str)

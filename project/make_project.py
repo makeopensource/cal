@@ -24,7 +24,7 @@ def make_project(local_path="./"):
         c = conn.cursor()
 
         # Insert a row of data
-        c.execute("INSERT INTO projects VALUES (?,?,?,?,?)", (local_path, duedate, course, semester, curr_path))
+        c.execute("INSERT INTO projects VALUES (?,?,?,?,?,?)", (local_path, duedate, course, semester, assignment, curr_path))
 
         # Save (commit) the changes
         conn.commit()
