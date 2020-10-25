@@ -1,14 +1,14 @@
 """ Args parse Implemented and View """
-import sys
 import os
 import json
+
 
 def make_project(local_path="./"):
     course = input("Course Name (i.e. CSE220): ")
     semester = input("Semester (f for fall, s for spring, i.e. f20, s19): ")
     assignment = input("FULL ASSIGNMENT NAME from Autograder: ")
     duedate = input("Due Date (MM/DD/YY): ")
-    retdict = {"course": course,"semester":semester, "assignment":assignment,"duedate":duedate}
+    retdict = {"course": course, "semester": semester, "assignment": assignment, "duedate": duedate}
     retjson = json.dumps(retdict)
     curr_path = os.getcwd()
     separator = "/"  # path separator (change for linux)
@@ -17,7 +17,7 @@ def make_project(local_path="./"):
     if local_path == "./":
         with open('../metadata.json', 'w') as outfile:
             json.dump(retjson, outfile)
-        return (curr_path.split(separator)[-1], curr_path)
+        return curr_path.split(separator)[-1], curr_path
 
     # make new project directory
     else:
