@@ -6,8 +6,20 @@ from project import submit as s
 from project import make_project as p
 from project.freezerestore import freeze as f
 from project.freezerestore import restore as r
+import sqlite3
 
 if __name__ == "__main__":
+
+    # setup sqlite server
+    conn = sqlite3.connect('projects.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS projects
+             (name text, duedate text, course text, semester text,  path text)''')
+
+    # Save (commit) the changes
+    conn.commit()
+    conn.close()
+
     parser = argparse.ArgumentParser()
     parser.add_argument("operation", action="store", type=str)
     parser.add_argument("--argname", default="", action="store", type=str)
